@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "KDRatio";
+}
+
+@model Modern_Warfare_2019_WebApp.Models.Soldier
+<h1 style="text-align: center; color: white;">KD Ratio</h1>
+
+<form asp-controller="Weapon" asp-action="ViewKDRatio" method="post">
+    <div class="form-group">
+        <label>Enter your kills</label>
+        <input id="number" class="form-control" type="number" name="Kills" /> <p style="color:red; font-weight: bolder;" id="validation"></p>
+        </div><br />
+
+    <div class="form-group">
+        <label>Enter your deaths</label>
+        <input id="number" class="form-control" type="number" name="Deaths" /> <p style="color:red; font-weight: bolder;" id="validation"></p>
+    </div> <br />
+    <button type="Submit">Calculate KD</button>
+    <br />
+</form>

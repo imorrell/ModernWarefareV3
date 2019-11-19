@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewData["Title"] = "ViewKDRatio";
+}
+
+@model Modern_Warfare_2019_WebApp.Models.Soldier
+<h1 style="text-align: center; color: white;">View KDRatio</h1>
+<br />
+
+@if (Model.KDRatio > 5.0)
+{
+
+<h2 style="font-weight: bolder; color: white;">
+    Hey @Model.SoldierName, you caught @Model.Kills bodies <br />
+    and got faded @Model.Deaths times. Your KOD ratio was<br />
+    @Model.KDRatio! Your a beast at Modern Warfare!
+</h2>
+
+    //<img src="~/pictures/" alt="" height="500" width="500" />
+
+    //<img src="~/pictures/" alt="" height="500" width="500" />
+
+}
+else if (Model.KDRatio >= 1.0 && Model.KDRatio <= 5)
+{
+
+    <h2 style="font-weight: bolder; color: white;">
+        Hey @Model.SoldierName, you caught @Model.Kills bodies <br />
+        and got faded @Model.Deaths times. Your KOD ratio was<br />
+        @Model.KDRatio! You aight! Step your game up next time.
+    </h2>
+
+    //<img src="~/pictures/" alt="" height="500" width="500" />
+
+    //<img src="~/pictures/" alt="" height="500" width="500" />
+
+}
+else
+{
+
+<h2 style="font-weight: bolder; color: white;">
+    Hey @Model.SoldierName, you caught @Model.Kills bodies <br />
+    and got faded @Model.Deaths times. Your KOD ratio was<br />
+    @Model.KDRatio! Bro, my guy, I'm sorry, but i just gotta say,<br />
+    you're garbage, trash, no good, terrible! Break the game, <br />
+    throw away your system because this is not your game! <br />
+    A man with no eyes can shoot better then you! You couldnt <br />
+    hit water if you fell out of a boat!
+</h2>
+
+    //<img src="~/pictures/" alt="" height="500" width="500" />
+
+    //<img src="~/pictures/" alt="" height="500" width="500" />
+
+}
+
